@@ -1,0 +1,50 @@
+<h1> Hello projet couture ! </h1>
+{{ title }}
+
+{% if posts is not empty %}
+    {% for post in posts %}
+        <div>
+            <h2>{{ post.post_title }}
+
+                {% if post.post_type == "sewing-projets" %}
+                    <span>Couture</span>
+                {% endif %}
+            </h2>
+            {% for keys, term in post.terms({query:{taxonomy: 'fabric'}}) %}
+                tissu : 
+                {{ term.title }}
+            {% endfor %}
+            {% for keys, term in post.terms({query:{taxonomy: 'pattern'}}) %}
+                patron : 
+                {{ term.title }}
+            {% endfor %}
+        </div>
+    {% endfor %}
+{% endif %}
+
+
+{# <div class="js-listing{{ listing.postTypePlural }} archiveHolder">
+    <div class="archiveFiltersBkg"></div>
+    {% set label = __('Filtrer', 'aydat') %}
+    <button type="button" class="btn btn-filters archiveFiltersToggle" aria-label="{{ label }}">
+        {{ getSvg('svg/settings.svg') }}
+        {{ label }}
+    </button>
+    <form class="js-listing{{ listing.postTypePlural }}__filters archiveFilters archiveFilters{{ listing.postTypePlural }}" action="{{ listing.currentMainUrl }}" method="GET">
+        {% include "templates/components/archive/" ~ listing.postType ~ "s/filters.twig" %}
+    </form>
+
+    <section class="archiveResults">
+
+        <div class="js-listing{{ listing.postTypePlural }}__results archiveResultsList">
+            {% include "templates/components/archive/results.twig" %}
+        </div>
+
+        <div class="js-listing{{ listing.postTypePlural }}__pagination">
+        {% include "templates/components/archive/pagination.twig" %}
+        </div>
+
+    </section>
+
+    <div class="js-listing{{ listing.postTypePlural }}__loader"></div>
+</div> #}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+    <head>
+        {% block preloadHead %}{% endblock %}
+        <meta charset="{{ site.charset }}">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+        <meta name="format-detection" content="telephone=no">
+        {# <title>title added with Yoast</title> #}
+        {# {% include 'commons/fonts.twig' %}
+
+        {{ wp_head }}
+
+        {% include 'commons/favicon.twig' %} #}
+
+        {% if fn('is_404') %}
+        <meta http-equiv="refresh" content="10;url={{ homeUrl }}" />
+        {% endif %}
+    </head>
+    <body class="{{ body_class }} bg-aydat-grey-300 w-full">
+        {% include 'template/commons/header.twig' %}
+
+        {% block content %}
+            No Content Found !
+        {% endblock %}
+
+        {% include 'template/commons/footer.twig' %}
+
+        {{ wp_footer }}
+
+        {% block dynamic_footer %}
+        {% endblock %}
+    </body>
+</html>
+

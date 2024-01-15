@@ -1,0 +1,45 @@
+# hidden files
+.DS_Store
+.directory
+.vscode
+
+# vendors
+node_modules
+
+# distrib
+dist/*
+
+# logs
+*.log
+
+# build
+## ignore images
+build/automation/diff/*
+build/automation/references/*
+build/automation/results/*
+build/automation/tests/*
+build/**/*.html
+
+# config files
+automation.json
+
+# gitkeep
+!**/.gitkeep
+
+# wordpress
+/wp/
+/wp-config.php
+/vendor
+/wp-content/languages/
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/db.php
+/wp-content/.object-cache.ini
+/wp-content/object-cache.php
+/wp-content/advanced-cache.php
+/wp-content/wp-cache-config.php
+/wp-content/w3tc-config/
+
+/wp-content/plugins/**
+/wp-content/mu-plugins/**/
