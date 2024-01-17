@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<h1>Contact</h1>
+
+<p>Pour nous contacter, veuillez remplir le formulaire ci-dessous.</p>
+
+<form action="/contact" method="post">
+  <input type="text" name="nom" placeholder="Votre nom">
+  <input type="email" name="email" placeholder="Votre adresse e-mail">
+  <textarea name="message" placeholder="Votre message"></textarea>
+  <input type="submit" value="Envoyer">
+</form>
+{% endblock %}

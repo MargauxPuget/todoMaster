@@ -1,11 +1,17 @@
 {
-    "name": "MPUGET/todomaster",
+    "name": "mpuget/todomaster",
     "require": {
+        "php": "^8.2",
         "timber/timber": "^2.0"
     },
     "config": {
         "allow-plugins": {
             "composer/installers": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "mpuget\\TodoMaster\\": "wp-content/themes/todomaster/class"
         }
     }
 }

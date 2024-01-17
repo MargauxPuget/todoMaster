@@ -1,5 +1,21 @@
 <?php
 
+use mpuget\TodoMaster\Theme;
+
+define('TEMPLATE_DIR', get_template_directory());
+define('ASSETS_SUB_DIR', '/assets/');
+define('ASSETS_DIR', get_stylesheet_directory_uri() . ASSETS_SUB_DIR);
+
+
+/**
+ * @var Theme $theme
+ */
+global $siteTheme;
+$siteTheme = new Theme();
+
+
+
+
 
 if (function_exists('add_theme_support')) {
     // Allow thumbnails
