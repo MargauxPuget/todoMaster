@@ -1,8 +1,8 @@
 <?php
 
-namespace mpuget\TodoMaster;
+namespace MPuget\TodoMaster;
 
-use mpuget\TodoMaster\TimberTheme;
+use MPuget\TodoMaster\TimberTheme;
 
 
 class Theme
@@ -15,5 +15,10 @@ class Theme
     {
         // Check if Timber exist
         TimberTheme::checkForTimber();
+
+
+        // Global
+        var_dump('3');
+        $this->timber = new TimberTheme();
     }
 }

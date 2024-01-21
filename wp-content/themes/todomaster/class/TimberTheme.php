@@ -1,6 +1,6 @@
 <?php
 
-namespace mpuget\TodoMaster;
+namespace MPuget\TodoMaster;
 
 
 use Timber\Timber;

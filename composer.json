@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "mpuget\\TodoMaster\\": "wp-content/themes/todomaster/class"
+            "MPuget\\TodoMaster\\": "wp-content/themes/todomaster/class"
         }
     }
 }
